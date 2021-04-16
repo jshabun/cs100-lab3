@@ -9,4 +9,4 @@ TEST(AddTest, AddNegatives) {
 	
 }
 
-#endif
+#endif //__ADD_TEST_HPP

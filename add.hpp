@@ -4,27 +4,28 @@
 #include <iostream>
 #include <string>
 
-#include "op.hpp"
+#include "base.hpp"
 
 using namespace std;
 
 class Add: public Base {
    public:
 	Add(Base* add_val1, Base* add_val2) : Base() {
-	   add1 = add_value1;
-	   add2 = add_value2;
+		 add1 = add_value1;
+	  	 add2 = add_value2;
 	}
 
 	virtual double evaluate() {
-	   return (add1->evaluate() + add2->evaluate());
+		 return (add1->evaluate() + add2->evaluate());
 	}
 
 	virtual std::string stringify() {
-	   return ("(" + add1->stringify() + "+" + add2->stringify() + ")");
+		 return ("(" + add1->stringify() + "+" + add2->stringify() + ")");
 	}
 
    private:
 	Base* add1;
 	Base* add2;
+};
 
-#endif
+#endif //__ADD_HPP__
