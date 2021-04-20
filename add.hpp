@@ -11,8 +11,8 @@ using namespace std;
 class Add: public Base {
    public:
 	Add(Base* add_val1, Base* add_val2) : Base() {
-		 add1 = add_value1;
-	  	 add2 = add_value2;
+		 add1 = add_val1;
+	  	 add2 = add_val2;
 	}
 
 	virtual double evaluate() {
@@ -20,7 +20,7 @@ class Add: public Base {
 	}
 
 	virtual std::string stringify() {
-		 return ("(" + add1->stringify() + "+" + add2->stringify() + ")");
+		 return ("(" + add1->stringify() + " + " + add2->stringify() + ")");
 	}
 
    private:
