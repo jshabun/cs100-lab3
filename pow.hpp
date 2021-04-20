@@ -3,6 +3,7 @@
 
 #include <iostrema>
 #include <string>
+#include <cmath>
 
 #include "base.hpp"
 
@@ -16,11 +17,11 @@ class Pow: public Base {
 	}
 	
 	virtual double evaluate() {
-		return ();
+		return (pow(base_val->evaluate(), exp_val->evaluate()));
 	}
 	
 	virtual std::string stringify(0 {
-		return ();
+		return ("(" + base_val->stringify() + " ** " + exp_val->stringify() + ")" );
 	}
 	
    private:
