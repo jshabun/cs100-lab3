@@ -4,19 +4,13 @@
 #include "base.hpp"
 
 class Op : public Base {
-  protected:
+     protected:
         double val;
-        std::string str;
 
-  public:
-        Op(double value) : Base() {
-        val = value;
-        str = std::to_string(value);
-        str.erase(str.find_last_not_of('0') + 1, std::string::npos);
-        str.erase(str.find_last_not_of('.') + 1, std::string::npos);
-}
+     public:
+        Op(double value) : Base() {val = value;}
         double evaluate() {return val; }
-        std::string stringify() { return str; }
+        std::string stringify() { return std::to_string(val); }
 };
 
 
