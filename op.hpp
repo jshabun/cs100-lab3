@@ -5,12 +5,14 @@
 
 class Op : public Base {
      protected:
-	double val;
+        double val;
 
      public:
-        Op(double value) : Base() {val = value; }
-        virtual double evaluate() { return val; }
-        virtual std::string stringify() { return std::to_string(val); }
+        Op(double value) : Base() {val = value;}
+        double evaluate() {return val; }
+        std::string stringify() { return std::to_string(val); }
 };
 
+
 #endif //__OP_HPP__
+
