@@ -5,6 +5,8 @@
 #include "sub.hpp"
 #include "mult.hpp"
 #include "op.hpp"
+#include "div.hpp"
+#include "pow.hpp"
 
 int main() {
     // This is a very basic main, and being able to correctly execute this main
@@ -21,3 +23,5 @@ int main() {
     std::cout << minus->stringify() << " = " << minus->evaluate() << std::endl;
     return 0;
 }
+
+
