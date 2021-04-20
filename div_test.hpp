@@ -38,3 +38,4 @@ TEST(DivTest, DivPositiveStr) {
         EXPECT_EQ(eval->stringify(), "(10.000000 / 5.000000)");
 }
 
+#endif //__DIV_TEST_HPP__
