@@ -20,7 +20,7 @@ class Sub: public Base {
 	}
 
 	virtual std:: string stringify() {
-		return ("(" sub1->stringify() + " - " + sub2->stringify() + ")");
+		return ("(" + sub1->stringify() + " - " + sub2->stringify() + ")");
 	}
 
    private:
