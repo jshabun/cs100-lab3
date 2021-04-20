@@ -6,36 +6,33 @@
 #include "op.hpp"
 
 TEST(OpTest, OpEvaluateNonZero) {
-    Op* test = new Op(8);
+    Base* test = new Op(8);
     EXPECT_EQ(test->evaluate(), 8);
 }
 
 TEST(OpTest, OpEvaluateZero) {
-    Op* test = new Op(0);
+    Base* test = new Op(0);
     EXPECT_EQ(test->evaluate(), 0);
 }
 
 TEST(OpTest, OpEvaluateNegNonZero) {
-    Op* test = new Op(-9);
+    Base* test = new Op(-9);
     EXPECT_EQ(test->evaluate(), -9);
 }
 
 TEST(OpTest, OpStringifyNonZero) {
-    Op* test = new Op(8);
-   std::string eight = "8";
-    EXPECT_EQ(test->stringify(), eight);
+    Base* eight = new Op(8);
+    EXPECT_EQ(eight->stringify(), "8.000000");
 }
 
 TEST(OpTest, OpStringifyZero) {
-    Op* test = new Op(0);
-   std::string zero = "0";
-    EXPECT_EQ(test->stringify(), zero);
+    Base* zero = new Op(0);
+    EXPECT_EQ(zero->stringify(), "0.000000");
 }
 
 TEST(OpTest, OpStringifyNegNonZero) {
-    Op* test = new Op(-9);
-   std::string negnine = "-9";
-    EXPECT_EQ(test->stringify(), negnine);
+    Base* negnine = new Op(-9);
+    EXPECT_EQ(negnine->stringify(), "-9.000000" );
 }
 
 #endif //__OP_TEST_HPP__
