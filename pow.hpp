@@ -1,7 +1,7 @@
 #ifndef __POW_HPP__
-#define __ADD_HPP__
+#define __POW_HPP__
 
-#include <iostrema>
+#include <iostream>
 #include <string>
 #include <cmath>
 
@@ -20,7 +20,7 @@ class Pow: public Base {
 		return (pow(base_val->evaluate(), exp_val->evaluate()));
 	}
 	
-	virtual std::string stringify(0 {
+	virtual std::string stringify() {
 		return ("(" + base_val->stringify() + " ** " + exp_val->stringify() + ")" );
 	}
 	

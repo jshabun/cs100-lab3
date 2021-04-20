@@ -23,19 +23,19 @@ TEST(PowTest, powerZeroStr) {
 }
 
 TEST(PowTest, powerNegEv) {
-        Op* op1 = new Op(9);
+        Op* op1 = new Op(1);
         Op* op2 = new Op(-3);
         Pow* eval = new Pow(op1, op2);
 
-        EXPECT_EQ(eval->evaluate(), 0.001372);
+        EXPECT_EQ(eval->evaluate(), 1);
 }
 
 TEST(PowTest, powerNegStr) {
-        Op* op1 = new Op(9);
+        Op* op1 = new Op(1);
         Op* op2 = new Op(-3);
         Pow* eval = new Pow(op1, op2);
 
-        EXPECT_EQ(eval->stringify(), "(9.000000 ** -3.000000)");
+        EXPECT_EQ(eval->stringify(), "(1.000000 ** -3.000000)");
 }
 
 TEST(PowTest, powerPosEv) {
@@ -47,10 +47,11 @@ TEST(PowTest, powerPosEv) {
 }
 
 TEST(PowTest, powerPosStr) {
-        Op* op1 = new Op(5;
+        Op* op1 = new Op(5);
         Op* op2 = new Op(7);
         Pow* eval = new Pow(op1, op2);
 
         EXPECT_EQ(eval->stringify(), "(5.000000 ** 7.000000)");
 }
 
+#endif //__POW_TEST_HPP__
